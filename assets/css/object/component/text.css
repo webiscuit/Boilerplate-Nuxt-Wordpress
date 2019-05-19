@@ -1,0 +1,18 @@
+.txt {
+  
+  &-bold { font-weight: bold; }
+  &-nolink { color: var(--text-color); }
+  &-justify { text-align: justify; }
+  &-R { text-align: right !important; }
+  &-C { text-align: center !important; }
+  
+  &-gray {color: #666; }
+  &-red { color: #f00; }
+  &-yellow { color: var(--primary); }
+  
+}
+
+/* color */
+.txt-yellow { color: var(--primary); }
+.txt-red { color: red; }
+

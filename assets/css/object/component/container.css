@@ -1,0 +1,12 @@
+.container {
+  @media (--lg) {
+    max-width: 960px !important;
+    box-sizing: content-box;
+  }
+  @media (--xs) {
+    padding: * 10px !important;
+  }
+  @media (max-width: 991px) and (min-width: 768px) {
+    max-width: 100% !important;
+  }
+}

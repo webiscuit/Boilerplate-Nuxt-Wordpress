@@ -1,0 +1,37 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  background: #fff;
+  font-family: var(--font-family) !important;
+  color: #000827 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* @media (min-width: 768px) {
+    padding-top: 67px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 45px;
+  } */
+}
+
+img {
+  max-width: 100%;
+}
+
+h2,h3,h4,h5,h6,li,p {
+  transform: scale(1,1.001);
+}
+
+p {
+  line-height: 1.875em;
+  letter-spacing: 0.05em;
+}
+
+a {
+  transition: opacity .3s ease;
+}
+a:hover {
+  opacity: .7;
+}

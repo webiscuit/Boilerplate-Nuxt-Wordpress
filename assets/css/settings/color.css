@@ -1,0 +1,45 @@
+:root {
+  
+  /* --------------------------------------------------
+    * 1. Initial 
+  ----------------------------------------------------*/
+
+  /* @start color */
+  --black: #000;
+  --dark-gray: #333;
+  --gray: #e7e7e7;
+  --light-gray: #aaa;
+  --cream: #faf6e3;
+  --red: #d67da0;
+  --blue: #3f526b;
+  --white: #fff;
+  --yellow: #efea3a;
+  --background: var(--white);
+  --brown: #ad6a35;
+  --border: #f3ebe5;
+  
+  --page-info: #FF5252;
+  --page-contact: #FF6E40;
+  --page-support: #00BFA5;
+  --page-company: #095198;
+  --page-intro: #FFC400;
+  /* @end color */
+  
+  /* --------------------------------------------------
+    * 2. Primary 
+  ----------------------------------------------------*/
+  --primary: var(--yellow);
+  --info: var(--blue);
+  --success: var(--green);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  
+  /* --------------------------------------------------
+    * 3. Settings 
+  ----------------------------------------------------*/
+  --text-color: var(--black);
+  --link-color: var(--dark-gray);
+  --hover-color: var(--red);
+  --bg-color: var(--background);
+
+}

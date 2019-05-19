@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Noto Sans CJK';
+  font-style: normal;
+  font-weight: normal; /*normal*/
+  src: url('~assets/fonts/NotoSansCJKjp-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans CJK';
+  font-style: normal;
+  font-weight: 500;  /*bold*/
+  src: url('~assets/fonts/NotoSansCJKjp-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans CJK';
+  font-style: normal;
+  font-weight: 700;  /*bold*/
+  src: url('~assets/fonts/NotoSansCJKjp-Bold.otf') format('opentype');
+}

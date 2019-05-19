@@ -1,0 +1,13 @@
+:root {
+  @define-mixin clearfix {
+    &:after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+  }
+}
+
+.clearfix {
+  @mixin clearfix;
+}
