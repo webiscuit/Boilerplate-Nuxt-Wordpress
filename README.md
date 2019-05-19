@@ -29,6 +29,7 @@ $ npm run wp:build
 
 ## Directories
 | Directory name | Usage |
+|:--- |
 | assets | Un-compiled assets such as Post css or Sass files, images, or fonts. |
 | components | Vue.js Components, import these from pages etc |
 | dist | Static files (generate this with 'npm run generate') |
