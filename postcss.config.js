@@ -2,9 +2,7 @@ module.exports = {
   plugins: {
     'postcss-import': {},
     'postcss-preset-env': {},
-    'cssnano': {},
     'postcss-discard-duplicates': {},
-    'postcss-import': { root: 'assets/css/' },
     'postcss-discard-comments': { removeAllButFirst: false },
     'postcss-custom-media': {},
     'postcss-preset-env': {

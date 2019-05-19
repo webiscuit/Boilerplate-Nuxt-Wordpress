@@ -28,7 +28,7 @@ export default {
     },
     bodyAttrs: {
     },
-    titleTemplate: '%s｜def_title',
+    titleTemplate: '%s｜' + site_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: viewport },
