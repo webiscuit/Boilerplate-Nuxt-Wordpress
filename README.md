@@ -3,6 +3,7 @@
 > Boilerplate for static && Wordpress website
 
 Use **Nust** for static pages, **webpack** for wordpress assets
+Use **Local by Flywheel** for local wordpress development
 
 ## Build Setup
 
