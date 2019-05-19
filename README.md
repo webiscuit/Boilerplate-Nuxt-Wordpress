@@ -2,7 +2,7 @@
 
 > Boilerplate for static && Wordpress website
 
-Use Nust for static pages, webpack for wordpress assets
+Use **Nust** for static pages, **webpack** for wordpress assets
 
 ## Build Setup
 
