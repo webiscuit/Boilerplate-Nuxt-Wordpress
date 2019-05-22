@@ -1,7 +1,6 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
-    'postcss-preset-env': {},
     'postcss-discard-duplicates': {},
     'postcss-discard-comments': { removeAllButFirst: false },
     'postcss-custom-media': {},
