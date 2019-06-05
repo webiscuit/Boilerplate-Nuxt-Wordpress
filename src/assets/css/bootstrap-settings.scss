@@ -1,0 +1,77 @@
+/* Color */
+$primary: #fc8a15;
+$secondary: #459944;
+$danger: #e60012;
+
+$body-bg: #fff;
+$body-color: #333;
+
+/* Link */
+$link-color: $primary;
+$link-hover-decoration: 'underline';
+
+/* Typography */
+$line-height-lg: 1.5;
+$line-height-sm: 1.5;
+$font-family-sans-serif: "Noto Sans", "Noto Sans CJK", sans-serif;
+
+/* Headings */
+$spacer: 1rem;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$headings-margin-bottom: $spacer / 2;
+$headings-font-weight: bold;
+$headings-line-height: 1.2;
+$headings-color: $body-color;
+
+/* Button */
+$btn-line-height: 1.33;
+$btn-font-size: 1rem;
+$btn-border-radius: 0;
+$input-btn-padding-x: 1.05rem;
+$btn-padding-y: 1rem;
+$btn-padding-x: 3.38rem;
+$btn-border-radius-lg: 0;
+$btn-font-size-lg: 1.125rem;
+$btn-padding-y-lg: .66em;
+$btn-padding-x-lg: 3.38em;
+$btn-border-radius-sm: 0;
+$btn-font-size-sm: .9375rem;
+$btn-padding-y-sm: .25rem;
+$btn-padding-x-sm: 1rem;
+
+/* Card */
+$card-border-width: 0;
+$card-border-radius: 0;
+
+/* Shadow */
+$box-shadow: 0 10px 10px rgba(#000, .1);
+
+/* Badge */
+$badge-border-radius: 0;
+
+/* Spacer */
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 2),
+    5: ($spacer * 3.5)
+  ),
+  $spacers
+);
+
+@import 'bootstrap/scss/bootstrap.scss';
+//@import 'bootstrap/scss/bootstrap-grid.scss';       // Only grid system
+//@import 'bootstrap/scss/bootstrap-reboot.scss';     // Only Reboot
+
+@import 'bootstrap-vue/src/index.scss';

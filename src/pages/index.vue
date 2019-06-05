@@ -30,14 +30,25 @@
 </template>
 
 <script>
+
 export default {
+  scrollToTop: true,
+
+  data() {
+    return {
+      bodyClass: 'home'
+    }
+  },
   head() {
     return {
       titleTemplate: null,
       title: process.env.site_name,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
-      ]
+        { hid: 'description', name: 'description', content: process.env.def_description }
+      ],
+      bodyAttrs: {
+        class: this.bodyClass
+      }
     }
   }
 }

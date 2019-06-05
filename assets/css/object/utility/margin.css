@@ -1,6 +1,0 @@
-@for $i from 0 to 80 {
-  .mt-$i { margin-top: $(i)px !important; }
-  .mb-$i { margin-bottom: $(i)px !important; }
-  .pt-$i { padding-top: $(i)px !important; }
-  .pb-$i { padding-bottom: $(i)px !important; }
-}

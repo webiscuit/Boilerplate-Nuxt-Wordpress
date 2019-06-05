@@ -1,0 +1,6 @@
+.container {
+  @media (--lg) {
+    max-width: 960px !important;
+    box-sizing: content-box;
+  }
+}

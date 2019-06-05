@@ -1,23 +1,24 @@
+/* -∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-
+  Import
+-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-*/
 import pkg from './package'
 import webpack from 'webpack'
 import path from 'path';
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
-const site_name = 'Set Site Name Here'
-const def_description = 'Set Description Here'
-const def_url = 'Set Url Here'
-const def_ogimage = 'Set OG Image Here'
-const viewport = 'width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0'
 
+
+/* -∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-
+  Use Global Variables
+-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-*/
+require('dotenv').config(); // from .env
+
+
+/* -∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-
+  Settings
+-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-*/
 export default {
   mode: 'universal',
-
-  /* 
-   ** Global variables
-   */
-  env: {
-    site_name: site_name,
-    site_url: def_url
-  },
 
   /*
    ** Headers of the page
@@ -28,64 +29,80 @@ export default {
     },
     bodyAttrs: {
     },
-    titleTemplate: '%s｜' + site_name,
+    titleTemplate: '%s｜' + process.env.site_name,
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: viewport },
-      { hid: 'description', name: 'description', content: def_description },
+      { name: 'viewport', content: process.env.viewport },
+      { hid: 'description', name: 'description', content: process.env.def_description },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: def_url },
-      { hid: 'og:title', content: site_name },
-      { hid: 'og:description', property: 'og:description', content: def_description },
-      { hid: 'og:image', property: 'og:image', content: def_ogimage },
+      { hid: 'og:url', property: 'og:url', content: process.env.def_url },
+      { hid: 'og:title', content: process.env.site_name },
+      { hid: 'og:description', property: 'og:description', content: process.env.def_description },
+      { hid: 'og:image', property: 'og:image', content: process.env.def_ogimage },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#333' },
 
   /*
    ** Global CSS
    */
   css: [
+    '@/assets/css/bootstrap-settings.scss',
     '@/assets/css/style.css'
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '@/assets/js/script.js', mode: 'client' },  // Old-style Common JS
+    // '~/plugins/vue-scrollto.js' // scroll
+  ],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/dotenv',
+    ["nuxt-imagemin", {
+      pngquant: { quality: '80' },
+      plugins: [
+        imageminMozjpeg( {quality: '80'} )
+      ]
+    }]
   ],
+    bootstrapVue: {
+      bootstrapCSS: false,
+      bootstrapVueCSS: false
+    },
 
-
-  resolve: {
-    alias: {
-      'Assets': path.resolve(__dirname, 'assets')
-    }
-  },
+  /*
+    ** Source Directory
+    */
+  srcDir: 'src/',
   
   /*
    ** Build configuration
    */
   build: {
     // quiet: true,
+    fallback: false,
+    publicPath: '/assets/',
     extractCSS: true,
+    // subFolders: false,
     filenames: {
-      app: () => '[name].js',
-      chunk: () => '[name].js',
-      css: () => '[name].css',
-      img: () => '[path][name].[ext]',
-      video: () => '[path][name].[ext]'
+      app: () => 'js/[name].js',
+      chunk: () => 'js/[name].js',
+      css: () => 'css/[name].css',
+      img: () => 'img/[folder]/[name].[ext]',
+      font: () => 'font/[name].[ext]'
     },
     maxChunkSize: 300000,
 

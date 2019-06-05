@@ -31,11 +31,11 @@ $ npm run wp:build
 ## Directories
 | Directory name | Usage |
 | ------ | ------ |
-| assets | Un-compiled assets such as Post css or Sass files, images, or fonts. |
-| components | Vue.js Components, import these from pages etc |
+| src/assets | Un-compiled assets such as Post css or Sass files, images, or fonts. |
+| src/components | Vue.js Components, import these from pages etc |
+| src/layouts | basic layouts for html |
+| src/pages | html basic files |
+| src/static | Contains files that likely won't be changed (i.e. the favicon) |
 | dist | Static files (generate this with 'npm run generate') |
-| layouts | basic layouts for html |
-| pages | html basic files |
-| static | Contains files that likely won't be changed (i.e. the favicon) |
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

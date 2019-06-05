@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-const srcpath = './assets/';
+const srcpath = './src/assets/';
 const csspath = './style.css';
 const outputpath = './public/wp-content/themes/sample/assets/';
 
@@ -86,7 +86,7 @@ module.exports = env => {
     },
     resolve: {
       alias: {
-        'assets': path.resolve(__dirname, 'assets')
+        'assets': path.resolve(__dirname, 'src/assets')
       },
       extensions: ['.js', '.jsx']
     },

@@ -7,13 +7,6 @@ body {
   color: #000827 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  /* @media (min-width: 768px) {
-    padding-top: 67px;
-  }
-  @media (max-width: 767px) {
-    padding-top: 45px;
-  } */
 }
 
 img {
@@ -21,12 +14,7 @@ img {
 }
 
 h2,h3,h4,h5,h6,li,p {
-  transform: scale(1,1.001);
-}
-
-p {
-  line-height: 1.875em;
-  letter-spacing: 0.05em;
+  /* transform: scale(1,1.001); */
 }
 
 a {
