@@ -1,14 +1,14 @@
 # boilerplate-nuxt
 
-> Boilerplate for static && Wordpress website
+> Boilerplate for static && Wordpress website  
 > 静的サイトとWordPress用assetsデプロイの共存テンプレート
 
-Use **Nuxt** for static pages, **webpack** for wordpress assets
+Use **Nuxt** for static pages, **webpack** for wordpress assets  
 Use **Local by Flywheel** for local wordpress development
 
-静的サイト生成には **Nuxt** を採用、
-Wordpressのassets用には **webpack**を使用（WP時はimg,css,js等のみ書き出し）
-WP環境の構築は **Local by Flywheel** の使用を想定
+静的サイト生成には **Nuxt** を採用、  
+Wordpressのassets用には **webpack**を使用（WP時はimg,css,js等のみ書き出し）  
+WP環境の構築は **Local by Flywheel** の使用を想定  
 
 ## Build Setup
 
