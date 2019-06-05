@@ -18,6 +18,7 @@ require('dotenv').config(); // from .env
   Settings
 -∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-∵-∴-*/
 export default {
+  dev: (process.env.NODE_ENV !== 'production'),
   mode: 'universal',
 
   /*
@@ -95,7 +96,8 @@ export default {
     // quiet: true,
     fallback: false,
     publicPath: '/assets/',
-    extractCSS: true,
+    devtools: process.env.NODE_ENV === 'production',
+    extractCSS:	process.env.NODE_ENV === 'production',
     // subFolders: false,
     filenames: {
       app: () => 'js/[name].js',
@@ -104,7 +106,6 @@ export default {
       img: () => 'img/[folder]/[name].[ext]',
       font: () => 'font/[name].[ext]'
     },
-    maxChunkSize: 300000,
 
     /*
      ** You can extend webpack config here
