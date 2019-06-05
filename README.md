@@ -39,7 +39,7 @@ $ npm run wp:build
 | src/assets | Un-compiled assets such as Post css or Sass files, images, or fonts. <br> 未圧縮のアセットファイル（CSSやimg, フォントなど） |
 | src/components | Vue.js Components, import these from pages etc <br> インポート用のコンポーネントファイル（ヘッダー・フッター等） |
 | src/layouts | basic layouts for html <br> 基本レイアウトファイル |
-| src/pages | html basic files <br> 各ページのファイル。HTML記述はこちら。template=pugを外すと通常のHTMLで記述可能 |
+| src/pages | html basic files <br> 各ページのファイル。HTML記述はこちら。templateのlang="pug"を外すと通常のHTMLで記述可能 |
 | src/static | Contains files that likely won't be changed (i.e. the favicon) <br> 圧縮させないアセットファイル等はこちらへ |
 | dist | Static files (generate this with 'npm run generate') <br> npm run generateした際に吐き出されるディレクトリ。納品ファイル |
 
