@@ -6,7 +6,6 @@ module.exports = {
     'postcss-custom-media': {},
     'postcss-preset-env': {
       stage: 0,
-      browsers: "last 2 versions",
       features: {
         'nesting-rules': false
       }
