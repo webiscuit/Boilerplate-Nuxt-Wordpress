@@ -9,19 +9,19 @@
           a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
     .container
       .row
-        .col-md-4
+        b-col(md="4")
           h2 Heading
           p
             | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
           p
             a.btn.btn-secondary(href='#', role='button') View details »
-        .col-md-4
+        b-col(md="4")
           h2 Heading
           p
             | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
           p
             a.btn.btn-secondary(href='#', role='button') View details »
-        .col-md-4
+        b-col(md="4")
           h2 Heading
           p
             | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -36,15 +36,15 @@ export default {
 
   data() {
     return {
-      bodyClass: 'home'
+      bodyClass: 'home', /* bodyに設定するclass */
     }
   },
   head() {
     return {
+      title: process.env.site_name, /* ページタイトル（初期値：サイト名） */
       titleTemplate: null,
-      title: process.env.site_name,
       meta: [
-        { hid: 'description', name: 'description', content: process.env.def_description }
+        { hid: 'description', name: 'description', content: process.env.def_description } /* descriptionを変更するときは"process.env.def_description"を差し替え */
       ],
       bodyAttrs: {
         class: this.bodyClass

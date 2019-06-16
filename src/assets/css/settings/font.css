@@ -1,18 +1,20 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese');
+
+/* @font-face {
   font-family: 'Noto Sans CJK';
   font-style: normal;
-  font-weight: normal; /*normal*/
+  font-weight: normal;
   src: url('~assets/fonts/NotoSansCJKjp-Regular.otf') format('opentype');
 }
 @font-face {
   font-family: 'Noto Sans CJK';
   font-style: normal;
-  font-weight: 500;  /*bold*/
+  font-weight: 500;
   src: url('~assets/fonts/NotoSansCJKjp-Medium.otf') format('opentype');
 }
 @font-face {
   font-family: 'Noto Sans CJK';
   font-style: normal;
-  font-weight: 700;  /*bold*/
+  font-weight: 700;
   src: url('~assets/fonts/NotoSansCJKjp-Bold.otf') format('opentype');
-}
+} */

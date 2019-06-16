@@ -1,23 +1,24 @@
 :root {
-    
+
   /* --------------------------------------------------
-    * 1. Initial 
+    * 1. Initial
   ----------------------------------------------------*/
-  
+
   /* Typography */
-  --font-family: "Noto Sans", "Noto Sans CJK", sans-serif;
+  --font-noto: 'Noto Sans JP', sans-serif;
+  --font-family: var(--font-noto);
   --font-size: 16px;
-  
+
   /* Miscellaneous */
   --speed: .3s;
   --easing: ease;
   --radius: 2px;
   --opacity: .6;
-  
+
   /* --------------------------------------------------
-    * 2. Content 
+    * 2. Content
   ----------------------------------------------------*/
   /*contents*/
   --base-width: 960px;
-  
+
 }

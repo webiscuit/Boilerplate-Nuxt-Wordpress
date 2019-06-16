@@ -12,10 +12,10 @@ export default {
     return {
       bodyClass: 'company', /* bodyに設定するclass */
     }
-  },  
+  },
   head() {
     return {
-      title: 'Company',  /* ページタイトル */
+      title: 'Test',  /* ページタイトル */
       // titleTemplate: null,   /* デフォルトのタイトル記述「ページ名｜サイト名」から変更する際はコメントアウトを外す */
       meta: [
         { hid: 'description', name: 'description', content: 'My custom description' }

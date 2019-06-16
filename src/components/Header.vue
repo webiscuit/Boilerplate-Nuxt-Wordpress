@@ -9,10 +9,8 @@
           nuxt-link(to='/').nav-item.nav-link.active
             | Home 
             span.sr-only (current)
-          nuxt-link.nav-item.nav-link(to='company') Company
-          a.nav-item.nav-link(href='#') Features
-          a.nav-item.nav-link(href='#') Pricing
-          a.nav-item.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+          nuxt-link.nav-item.nav-link(to='/company') Company
+          nuxt-link.nav-item.nav-link(to='/test') Test
 </template>
 
 <script>
